@@ -121,5 +121,5 @@
 </template>
 
 <style scoped>
-
+  
 </style>
