@@ -1,4 +1,5 @@
-<script setup></script>
+<script setup>
+</script>
 
 <template>
   <header>
@@ -24,10 +25,12 @@
         </nav>
         <div class="icons">
           <RouterLink to="/carrinho">
-            <span class="fa-solid fa-cart-shopping" style="color: #63e6be"></span>
+            <span class="mdi mdi-cart" style="color: #27AE60;"></span>
           </RouterLink>
-          <span class="fa-solid fa-heart" style="color: #63e6be"></span>
-          <span class="fa-solid fa-user" style="color: #63e6be"></span>
+          <img src="../src/assets/Line 1.png" class="separation">
+          <span class="mdi mdi-heart-outline" style="color: #27AE60;"></span>
+          <img src="../src/assets/Line 1.png" class="separation">
+          <span class="mdi mdi-account-outline" style="color: #27AE60;"></span>
         </div>
       </li>
     </ul>
@@ -39,7 +42,7 @@
     <div class="footer">
       <div>
         <ul>
-          <p>IFbooks</p>
+          <h3>IFbooks</h3>
           <li>
             <span class="fa-brands fa-square-facebook"></span>
             <span class="fa-brands fa-square-instagram"></span>
@@ -47,8 +50,8 @@
           </li>
         </ul>
       </div>
-      <div>
-        <h3>Contatos</h3>
+      <div class="contato">
+        <h2>Contatos</h2>
         <ul>
           <li>
             <span class="fa-solid fa-phone"></span>
@@ -71,6 +74,9 @@
 </template>
 
 <style scoped>
+
+  /* formatação header  */
+
   header {
     margin: 2vw 8vw;
   }
@@ -127,14 +133,58 @@
     margin-right: 30%;
     font-size: 130%;
     color: #7B7881;
-    justify-content: center;
   }
 
   div.icons {
-    margin-left: 120%;
+    margin-left: 100%;
   }
 
   div.icons span {
-    font-size: 150%;
+    font-size: 180%;
+    margin: 0 10%;
+  }
+
+  div.icons img {
+    margin: 0 10%;
+  }
+
+  /* formatação footer */
+
+
+  footer {
+    background-color: #27AE60;
+    color: white;
+    padding: 5% 8%;
+  }
+
+  div.footer {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  div.footer p {
+    font-size: 110%;
+  }
+
+  div.footer h2 {
+    font-weight: bold;
+    font-size: 130%;
+  }
+  div.footer h3 {
+    font-size: 140%;
+  }
+
+  div.contato ul li {
+    display: flex;
+
+
+  }
+  div.contato ul {
+    justify-content: space-between;
+  }
+
+  div.footer span {
+    font-size: 260%;
+    margin: 0 2%;
   }
 </style>
