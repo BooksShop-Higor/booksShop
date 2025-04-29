@@ -40,7 +40,7 @@
 
   <footer>
     <div class="footer">
-      <div>
+      <div class="redesSo">
         <ul>
           <h3>IFbooks</h3>
           <li>
@@ -69,7 +69,7 @@
         <img src="../src/assets/ways to pay.png" alt="" />
       </div>
     </div>
-    <p>© Alguns direitos reservados. IFbooks 2025.</p>
+    <p class="direitos">© Alguns direitos reservados. IFbooks 2025.</p>
   </footer>
 </template>
 
@@ -78,8 +78,11 @@
   /* formatação header  */
 
   header {
-    margin: 2vw 8vw;
+    border-bottom: 1px solid #27AE60;
+    padding: 2% 5%;
+    padding-bottom: 1.5%;
   }
+
   nav {
     display: flex;
     margin-left: 30%;
@@ -159,7 +162,6 @@
 
   div.footer {
     display: flex;
-    justify-content: space-between;
   }
 
   div.footer p {
@@ -184,7 +186,31 @@
   }
 
   div.footer span {
-    font-size: 260%;
-    margin: 0 2%;
+    font-size: 240%;
+    margin-right: 4%;
   }
+
+  div.contato  span {
+    font-size: 100%;
+  }
+
+  div.redesSo {
+    margin-right: 75%;
+  }
+
+  div.contato li {
+    align-items: center;
+    justify-content: space-between;
+    margin: 5% 0;
+  }
+
+  footer img {
+    margin-top: 10%;
+  }
+
+  p.direitos {
+    text-align: center;
+    margin-top: 5%;
+  }
+
 </style>
