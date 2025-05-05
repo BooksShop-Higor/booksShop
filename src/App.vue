@@ -28,9 +28,9 @@
             <span class="mdi mdi-cart" style="color: #27AE60;"></span>
           </RouterLink>
           <img src="../src/assets/Line 1.png" class="separation">
-          <span class="mdi mdi-heart-outline" style="color: #27AE60;"></span>
+          <a href=""><span class="mdi mdi-heart-outline" style="color: #27AE60;"></span></a>
           <img src="../src/assets/Line 1.png" class="separation">
-          <span class="mdi mdi-account-outline" style="color: #27AE60;"></span>
+          <a href=""><span class="mdi mdi-account-outline" style="color: #27AE60;"></span></a>
         </div>
       </li>
     </ul>
@@ -44,9 +44,9 @@
         <ul>
           <h3>IFbooks</h3>
           <li>
-            <span class="fa-brands fa-square-facebook"></span>
-            <span class="fa-brands fa-square-instagram"></span>
-            <span class="fa-brands fa-square-x-twitter"></span>
+            <a href="https://www.facebook.com/"><span class="fa-brands fa-square-facebook" style="color: white;"></span></a>
+            <a href="https://www.instagram.com/"><span class="fa-brands fa-square-instagram" style="color: white;"></span></a>
+            <a href="https://x.com/"><span class="fa-brands fa-square-x-twitter" style="color: white;"></span></a>
           </li>
         </ul>
       </div>

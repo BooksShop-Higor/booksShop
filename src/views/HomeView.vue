@@ -78,23 +78,24 @@
     </section>
 
     <section class="holder">
-      <img src="../assets/caminhão.png" alt=""> <p>|</p>
-      <img src="../assets/estrela.png" alt=""> <p>|</p>
-      <img src="../assets/livros.png" alt=""> 
+      <img src="../assets/caminhão.png" alt=""> <img src="../assets/line 2.png" alt="">
+      <img src="../assets/estrela.png" alt="">  <img src="../assets/line 2.png" alt="">
+      <img src="../assets/livros.png" alt="">
     </section>
 
-    <section>
+    <section class="lancamentos">
       <h3>Lançamentos</h3>
 
-      <div>
-        <article v-for="lancamento in lancamentos1" :key="lancamento.id">
+      <ul>
+        <li v-for="lancamento in lancamentos1" :key="lancamento.id">
         <img :src="lancamento.imagem" alt="">
         <h2>{{ lancamento.titulo }}</h2>
         <p>{{ lancamento.autor }}</p>
-        <p>R${{ lancamento.preco }}</p>
+        <p class="bold">R${{ lancamento.preco }}</p>
         <button>Comprar</button>
-      </article>
-      </div>
+
+        </li>
+    </ul>
 
     </section>
 
@@ -150,5 +151,55 @@
 
   .banner {
     border-bottom: 1px solid #27AE60;
+  }
+
+  /* Formatação holder */
+
+  .holder {
+    display: flex;
+    justify-content: space-between;
+    padding: 5% 10%;
+    border-bottom: solid #27AE60 1px;
+  }
+
+  /* for,atacao lançamentos */
+
+  .lancamentos {
+    padding: 4%;
+  }
+
+  .lancamentos h3 {
+    font-weight: bold;
+    font-size: 240%;
+    margin-bottom: 3%;
+  }
+
+  .lancamentos ul {
+    display: flex;
+    flex-wrap: wrap ;
+    justify-content: center;
+  }
+
+  .lancamentos li {
+    margin-right: 5%;
+    margin-bottom: 3%;
+  }
+
+  .lancamentos h2 {
+    font-weight: bold;
+  }
+
+  .lancamentos p {
+    margin-bottom: 3%;
+  }
+
+  .lancamentos .bold {
+    font-weight: bold;
+    font-size: 120%;
+  }
+
+  .lancamentos button {
+    color: white;
+    background-color: #27AE60;
   }
 </style>
