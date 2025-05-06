@@ -78,9 +78,20 @@
     </section>
 
     <section class="holder">
-      <img src="../assets/caminhão.png" alt=""> <img src="../assets/line 2.png" alt="">
-      <img src="../assets/estrela.png" alt="">  <img src="../assets/line 2.png" alt="">
-      <img src="../assets/livros.png" alt="">
+      <ul>
+        <li>
+          <span class="mdi mdi-truck"></span>
+          <h2>Frete grátis para SC</h2>
+        </li>
+        <li class="meio">
+          <span class="mdi mdi-star"></span>
+          <h2>Livros Recomendados</h2>
+        </li>
+        <li>
+          <span class="mdi mdi-book-open-page-variant"></span>
+          <h2>Mais vendidos</h2>
+        </li>
+      </ul>
     </section>
 
     <section class="lancamentos">
@@ -91,8 +102,8 @@
         <img :src="lancamento.imagem" alt="">
         <h2>{{ lancamento.titulo }}</h2>
         <p>{{ lancamento.autor }}</p>
-        <p class="bold">R${{ lancamento.preco }}</p>
-        <button>Comprar</button>
+        <p class="bold">R${{ lancamento.preco }} <a href=""><span class="mdi mdi-heart-outline" style="color: #27AE60;"></span></a></p>
+        <button><span class="mdi mdi-cart" style="color: white;"></span>Comprar</button>
 
         </li>
     </ul>
@@ -156,13 +167,36 @@
   /* Formatação holder */
 
   .holder {
-    display: flex;
-    justify-content: space-between;
-    padding: 5% 10%;
+    padding: 5%;
     border-bottom: solid #27AE60 1px;
   }
 
-  /* for,atacao lançamentos */
+  .holder ul {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .holder li {
+    display: flex;
+    font-size: 100%;
+  }
+
+  .holder li:first-child {
+    border-right: solid black 2px ;
+    padding-right: 10%;
+  }
+
+  .holder li:last-child {
+    border-left: solid black 2px;
+    padding-left: 10%;
+  }
+
+  .holder span {
+    font-size: 240%;
+    margin-right: 1%;
+  }
+
+  /* formatacao lançamentos */
 
   .lancamentos {
     padding: 4%;
@@ -182,7 +216,7 @@
 
   .lancamentos li {
     margin-right: 5%;
-    margin-bottom: 3%;
+    margin-bottom: 5%;
   }
 
   .lancamentos h2 {
@@ -201,5 +235,9 @@
   .lancamentos button {
     color: white;
     background-color: #27AE60;
+    width: 100%;
+    height: 8%;
+    justify-content: space-between;
+    font-size: 110%;
   }
 </style>

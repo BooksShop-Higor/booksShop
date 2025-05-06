@@ -6,7 +6,7 @@
     <ul>
       <li class="pesquisa">
         <h3>IFbooks</h3>
-        <img src="../src/assets/Line 1.png" alt="">
+
         <p>
           Apreço a
           leitura
@@ -27,9 +27,7 @@
           <RouterLink to="/carrinho">
             <span class="mdi mdi-cart" style="color: #27AE60;"></span>
           </RouterLink>
-          <img src="../src/assets/Line 1.png" class="separation">
           <a href=""><span class="mdi mdi-heart-outline" style="color: #27AE60;"></span></a>
-          <img src="../src/assets/Line 1.png" class="separation">
           <a href=""><span class="mdi mdi-account-outline" style="color: #27AE60;"></span></a>
         </div>
       </li>
@@ -54,7 +52,7 @@
         <h2>Contatos</h2>
         <ul>
           <li>
-            <span class="fa-solid fa-phone"></span>
+            <span class="mdi mdi-phone"></span>
             <p>+55 47 40045263</p>
           </li>
           <li>
@@ -101,16 +99,15 @@
   header h3 {
     font-size: 160%;
     text-align: center;
+    border-right: solid #27AE60 2px;
+    padding: 0 2%;
   }
   header p {
     color: #27ae5f7e;
     line-height: 120%;
+    padding-left: 2%;
   }
 
-  header img {
-    margin: 0 1% 0 2%;
-    font-size: 45%;
-  }
 
   header li div {
     display: flex;
@@ -147,9 +144,13 @@
     margin: 0 10%;
   }
 
-  div.icons img {
-    margin: 0 10%;
+
+  div.icons .mdi-heart-outline {
+    border-right: solid #27AE60 1px;
+    border-left: solid #27AE60 1px;
+    padding: 0 2%;
   }
+
 
   /* formatação footer */
 
