@@ -72,7 +72,6 @@
       </li>
       <li>
         <img src="../assets/book.png" alt="">
-        <p>*within the stock limit</p>
       </li>
     </ul>
     </section>
@@ -80,15 +79,15 @@
     <section class="holder">
       <ul>
         <li>
-          <span class="mdi mdi-truck"></span>
+          <span class="mdi mdi-truck" style="color: black;"></span>
           <h2>Frete grátis para SC</h2>
         </li>
         <li class="meio">
-          <span class="mdi mdi-star"></span>
+          <span class="mdi mdi-star" style="color: black;"></span>
           <h2>Livros Recomendados</h2>
         </li>
         <li>
-          <span class="mdi mdi-book-open-page-variant"></span>
+          <span class="mdi mdi-book-open-page-variant" style="color: black;"></span>
           <h2>Mais vendidos</h2>
         </li>
       </ul>
@@ -118,7 +117,7 @@
 <style scoped>
   .banner ul {
     display: flex;
-    padding: 2% 5%;
+    padding: 2% 8%;
     align-items: center;
     justify-content: space-between;
   }
@@ -157,9 +156,9 @@
   }
 
   .banner ul li:last-child p {
-    text-align: end;
+    margin-left: 10%;
   }
-
+  
   .banner {
     border-bottom: 1px solid #27AE60;
   }
@@ -170,42 +169,52 @@
     padding: 5%;
     border-bottom: solid #27AE60 1px;
   }
+  .holder h2 {
+    color: black;
+    font-weight: bold;
+  }
 
   .holder ul {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
   }
 
   .holder li {
     display: flex;
     font-size: 100%;
+    align-items: center;
+  }
+
+  .holder .meio {
+    border-right: solid black 2px ;
+    border-left: solid black 2px;
+    padding: 0 10%;
   }
 
   .holder li:first-child {
-    border-right: solid black 2px ;
     padding-right: 10%;
   }
 
   .holder li:last-child {
-    border-left: solid black 2px;
     padding-left: 10%;
   }
 
   .holder span {
-    font-size: 240%;
-    margin-right: 1%;
+    font-size: 300%;
   }
 
   /* formatacao lançamentos */
 
   .lancamentos {
-    padding: 4%;
+    padding: 3%;
+    color: black;
   }
 
   .lancamentos h3 {
     font-weight: bold;
     font-size: 240%;
-    margin-bottom: 3%;
+    margin-bottom: 5%;
+    margin-left: 9%;
   }
 
   .lancamentos ul {
@@ -239,5 +248,10 @@
     height: 8%;
     justify-content: space-between;
     font-size: 110%;
+  }
+
+  .lancamentos .bold a span {
+    margin-left: 60%;
+    font-size: 150%;
   }
 </style>

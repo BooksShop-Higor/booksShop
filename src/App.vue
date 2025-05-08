@@ -158,11 +158,13 @@
   footer {
     background-color: #27AE60;
     color: white;
-    padding: 5% 8%;
+    padding: 3% 0;
   }
 
   div.footer {
     display: flex;
+    justify-content: space-between;
+    margin: 0 10%;
   }
 
   div.footer p {
@@ -195,10 +197,6 @@
     font-size: 100%;
   }
 
-  div.redesSo {
-    margin-right: 75%;
-  }
-
   div.contato li {
     align-items: center;
     justify-content: space-between;
@@ -206,12 +204,14 @@
   }
 
   footer img {
-    margin-top: 10%;
+    margin-top: 30%;
   }
 
   p.direitos {
     text-align: center;
-    margin-top: 5%;
+    margin-top: 3%;
+    border-top: solid #F1F1F1 2px;
+    padding-top: 2% ;
   }
 
 </style>
