@@ -1,61 +1,80 @@
 <script setup>
-    import { ref } from "vue";
+  import {ref} from 'vue'
 
-    const lancamentos1 = ref([
-      {
-        imagem: '../src/assets/books/cfi_vol2.png',
-        titulo: 'Chsin of Iron: Volume 2',
-        autor: 'Cassandra Clare',
-        preco: '23.24'
+    const lancamentos = ref([
+  {
+    imagem: '../src/assets/books/cfi_vol2.png',
+    titulo: 'Chsin of Iron: Volume 2',
+    autor: 'Cassandra Clare',
+    preco: '23.24',
+    quantidade: 0,
+    id: '0'
 
-      },
-      {
-        imagem: '../src/assets/books/cft.png',
-        titulo: 'Chain of Thorns',
-        autor: 'Cassandra Clare',
-        preco: '23.24'
+  },
+  {
+    imagem: '../src/assets/books/cft.png',
+    titulo: 'Chain of Thorns',
+    autor: 'Cassandra Clare',
+    preco: '23.24',
+    quantidade: 0,
+    id: '1'
 
-      },
-      {
-        imagem: '../src/assets/books/cofa.png',
-        titulo: 'City of Fallen Angels',
-        autor: 'Cassandra Clare',
-        preco: '13.94'
 
-      },
-      {
-        imagem: '../src/assets/books/nonaTheNinth.png',
-        titulo: 'Nona The Ninth',
-        autor: 'Cassandra Clare',
-        preco: '16.84'
-      },
-      {
-        imagem: '../src/assets/books/harlemS.png',
-        titulo: 'Harlem Shuffle',
-        autor: 'Colson Whitehead',
-        preco: '26.92'
+  },
+  {
+    imagem: '../src/assets/books/cofa.png',
+    titulo: 'City of Fallen Angels',
+    autor: 'Cassandra Clare',
+    preco: '13.94',
+    quantidade: 0,
+    id: '2'
 
-      },
-      {
-        imagem: '../src/assets/books/two.png',
-        titulo: 'Two Old Women',
-        autor: 'Velma Wallis',
-        preco: '13.95'
-      },
-      {
-        imagem: '../src/assets/books/carrie.png',
-        titulo: 'Carrie Soto Is Back',
-        autor: 'Taylor Jenkins Reid',
-        preco: '26.04'
+  },
+  {
+    imagem: '../src/assets/books/nonaTheNinth.png',
+    titulo: 'Nona The Ninth',
+    autor: 'Cassandra Clare',
+    preco: '16.84',
+    quantidade: 0,
+    id: '3'
 
-      },
-      {
-        imagem: '../src/assets/books/bookLovers.png',
-        titulo: 'Book Lovers',
-        autor: 'Emily Henry',
-        preco: '15.81'
-      }
-     ])
+  },
+  {
+    imagem: '../src/assets/books/harlemS.png',
+    titulo: 'Harlem Shuffle',
+    autor: 'Colson Whitehead',
+    preco: '26.92',
+    quantidade: 0,
+    id: '4'
+
+  },
+  {
+    imagem: '../src/assets/books/two.png',
+    titulo: 'Two Old Women',
+    autor: 'Velma Wallis',
+    preco: '13.95',
+    quantidade: 0,
+    id:'5'
+  },
+  {
+    imagem: '../src/assets/books/carrie.png',
+    titulo: 'Carrie Soto Is Back',
+    autor: 'Taylor Jenkins Reid',
+    preco: '26.04',
+    quantidade: 0,
+    id:'6'
+
+  },
+  {
+    imagem: '../src/assets/books/bookLovers.png',
+    titulo: 'Book Lovers',
+    autor: 'Emily Henry',
+    precoTotal: '15.81',
+    preco: '15.81',
+    quantidade: 0,
+    id: '7'
+  }
+ ])
 
 </script>
 
@@ -97,7 +116,7 @@
       <h3>Lançamentos</h3>
 
       <ul>
-        <li v-for="lancamento in lancamentos1" :key="lancamento.id">
+        <li v-for="lancamento in lancamentos" :key="lancamento.id">
         <img :src="lancamento.imagem" alt="">
         <h2>{{ lancamento.titulo }}</h2>
         <p>{{ lancamento.autor }}</p>
@@ -105,7 +124,7 @@
         <button><span class="mdi mdi-cart" style="color: white;"></span>Comprar</button>
 
         </li>
-    </ul>
+      </ul>
 
     </section>
 
@@ -158,7 +177,7 @@
   .banner ul li:last-child p {
     margin-left: 10%;
   }
-  
+
   .banner {
     border-bottom: 1px solid #27AE60;
   }
