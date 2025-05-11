@@ -1,5 +1,10 @@
 <script setup>
   import {ref} from 'vue'
+  import { useCartStore } from '../stores/store'
+  import { useRouter } from 'vue-router'
+
+  const router = useRouter()
+  const carrinhoLoja = useCartStore()
 
 
     const lancamentos = ref([
@@ -17,7 +22,6 @@
     titulo: 'Chain of Thorns',
     autor: 'Cassandra Clare',
     preco: '23.24',
-    quantidade: 0,
     id: '1'
 
 
@@ -27,7 +31,6 @@
     titulo: 'City of Fallen Angels',
     autor: 'Cassandra Clare',
     preco: '13.94',
-    quantidade: 0,
     id: '2'
 
   },
@@ -36,7 +39,6 @@
     titulo: 'Nona The Ninth',
     autor: 'Cassandra Clare',
     preco: '16.84',
-    quantidade: 0,
     id: '3'
 
   },
@@ -45,7 +47,6 @@
     titulo: 'Harlem Shuffle',
     autor: 'Colson Whitehead',
     preco: '26.92',
-    quantidade: 0,
     id: '4'
 
   },
@@ -54,7 +55,6 @@
     titulo: 'Two Old Women',
     autor: 'Velma Wallis',
     preco: '13.95',
-    quantidade: 0,
     id:'5'
   },
   {
@@ -62,7 +62,6 @@
     titulo: 'Carrie Soto Is Back',
     autor: 'Taylor Jenkins Reid',
     preco: '26.04',
-    quantidade: 0,
     id:'6'
 
   },
@@ -72,10 +71,14 @@
     autor: 'Emily Henry',
     precoTotal: '15.81',
     preco: '15.81',
-    quantidade: 0,
     id: '7'
   }
  ])
+
+ const addToCart = (livro) => {
+  carrinhoLoja.addItem(livro)
+  router.push('/carrinho')
+}
 
 </script>
 
@@ -122,7 +125,7 @@
         <h2>{{ lancamento.titulo }}</h2>
         <p>{{ lancamento.autor }}</p>
         <p class="bold">R${{ lancamento.preco }} <a href=""><span class="mdi mdi-heart-outline" style="color: #27AE60;"></span></a></p>
-        <button><span class="mdi mdi-cart" style="color: white;"></span>Comprar</button>
+        <button @click="addToCart(lancamento)"><span class="mdi mdi-cart" style="color: white;"></span>Comprar</button>
 
         </li>
       </ul>

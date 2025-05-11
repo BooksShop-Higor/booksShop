@@ -47,20 +47,5 @@ export const useCartStore = defineStore('cart', {
         item.quantity = newQuantity
       }
     },
-
-    applyCoupon(code) {
-      if (code === 'Kennedy10') {
-        this.discount = 0.1
-        this.discountCode = code
-      } else if (code === 'Eduardo20') {
-        this.discount = 0.2
-        this.discountCode = code
-      }
-    },
-
-    removeCoupon() {
-      this.discount = 0
-      this.discountCode = ''
-    }
   }
-}) 
+})
