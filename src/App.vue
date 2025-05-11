@@ -1,38 +1,34 @@
 <script setup>
+
 </script>
 
 <template>
   <header>
-    <ul>
-      <li class="pesquisa">
-        <h3>IFbooks</h3>
+    <div id="logo">
+      <p>IFbooks</p>
+      <p><span>Apreço a<br>
+        leitura</span></p>
+    </div>
+    <div id="search">
+      <input type="text" placeholder="Pesquisar" id="input-search">
+    <img id="image-search" src="../src/assets/lupa.png" alt="Lupa">
+    </div>
+    <nav>
+      <ul id="header-page-links">
+        <li><a href="#">Termos</a></li>
+        <li><a href="#">Equipe</a></li>
+        <li><a href="#">Envio</a></li>
+        <li><a href="#">Devoluções</a></li>
+      </ul>
+    </nav>
 
-        <p>
-          Apreço a
-          leitura
-        </p>
-        <div>
-          <img src="../src/assets/lupa.png" alt="" />
-          <input type="text" placeholder="Pesquisar" />
-        </div>
-      </li>
-      <li>
-        <nav>
-          <a href="">Termos</a>
-          <a href="">Equipe</a>
-          <a href="">Envio</a>
-          <a href="">Devoluções</a>
-        </nav>
-        <div class="icons">
-          <RouterLink to="/carrinho">
-            <span class="mdi mdi-cart" style="color: #27AE60;"></span>
-          </RouterLink>
-          <a href=""><span class="mdi mdi-heart-outline" style="color: #27AE60;"></span></a>
-          <a href=""><span class="mdi mdi-account-outline" style="color: #27AE60;"></span></a>
-        </div>
-      </li>
-    </ul>
+      <RouterLink class="image-links" to="/carrinho"> <span class="mdi mdi-cart" style="color: #27AE60; font-size: 1.5rem;"></span></RouterLink>
+      <p class="divisao-links">|</p>
+      <a class="image-links" href="#"><span class="mdi mdi-heart" style="color: #27AE60; font-size: 1.5rem;"></span></a>
+      <p class="divisao-links">|</p>
+      <a class="image-links" href="#"><span class="mdi mdi-account" style="color: #27AE60; font-size: 1.5rem;"></span></a>
   </header>
+
 
   <router-view></router-view>
 
@@ -75,82 +71,81 @@
 
   /* formatação header  */
 
-  header {
-    border-bottom: 1px solid #27AE60;
-    padding: 2% 5%;
-    padding-bottom: 1.5%;
-  }
-
-  nav {
+ header{
+    padding: 1vw 10vw;
+    background-color: white;
     display: flex;
-    margin-left: 30%;
+    justify-content: space-between;
+    border-bottom: 2px #27AE60 solid;
   }
-
-  header ul {
+  header #logo{
     display: flex;
-    justify-content: center;
-    justify-content: flex-start;
+  }
+  header #logo p{
+    font-size: 1.5rem;
+    color: #231F2D;
+    padding-right: 0.5vw;
+    margin-top: 0.5vw;
+  }
+  header #logo p span{
+    font-size: 0.8rem;
+    color: #27AE60;
+    padding-left: 0.5vw;
+    padding-right: 0;
+    display: inline-block;
+    border-left: 2px #27AE60 solid;
+    margin-top: 0;
+    margin-right: 2vw;
   }
 
-  header li {
+  header #search {
     display: flex;
-
-  }
-  header h3 {
-    font-size: 160%;
+    align-items: center;
     text-align: center;
-    border-right: solid #27AE60 2px;
-    padding: 0 2%;
   }
-  header p {
-    color: #27ae5f7e;
-    line-height: 120%;
-    padding-left: 2%;
+  header #input-search{
+    font-family: inherit;
+    font-size: inherit;
+    background-color: #F1F1F1;
+    border: none;
+    color: #B8B8B8;
+    padding: 0.7rem 1rem;
+    border-radius: 2px;
+    width: 30em;
+    transition: all ease-in-out .5s;
+    margin-right: -2vw;
   }
-
-
-  header li div {
+  header #search img{
+    width: 20px;
+  }
+  header #input-search:focus {
+    outline: 1px solid #B8B8B8;
+  }
+  header #image-search:hover {
+    cursor: pointer;
+  }
+  header #header-page-links {
+    list-style: none;
     display: flex;
   }
-
-  input {
-  background-color: #F1F1F1;
-  margin-left: 6%;
-  width: 30vw;
-  height: 120%;
-  color: #B8B8B8;
-  border: none;
-  padding: 0 0 0 2%;
+  header #header-page-links li{
+    margin: 1vw;
   }
-
-  header ul li:first-child div img {
-  margin-left: 28%;
-  margin-top: 0.7%;
-  position: absolute;
-  }
-
-  nav a {
-    margin-right: 30%;
-    font-size: 130%;
+  header #header-page-links li a{
     color: #7B7881;
+    text-decoration: none;
+    transition: all ease-in-out .5s;
   }
-
-  div.icons {
-    margin-left: 100%;
+  header #header-page-links li a:hover{
+    text-decoration: underline;
   }
-
-  div.icons span {
-    font-size: 180%;
-    margin: 0 10%;
+  header .image-links {
+    padding-top: 0.5vw;
   }
-
-
-  div.icons .mdi-heart-outline {
-    border-right: solid #27AE60 1px;
-    border-left: solid #27AE60 1px;
-    padding: 0 2%;
+  header .divisao-links{
+    font-size: 30px;
+    color: #27AE60;
   }
-
 
   /* formatação footer */
 
