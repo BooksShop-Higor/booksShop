@@ -1,6 +1,6 @@
-# books
+# Books Shop do Higor
 
-This template should help get you started developing with Vue 3 in Vite.
+<p>Pruduzido com vue.js ( framework JavaScript progressivo que simplifica o desenvolvimento de interfaces de usuário complexas e dinâmicas)</p>
 
 ## Recommended IDE Setup
 
